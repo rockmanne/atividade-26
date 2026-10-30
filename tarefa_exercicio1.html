@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1 - Lógica de Programação com JavaScript</title>
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --accent: #fd79a8;
+            --light: #f8f9fa;
+            --dark: #2d3436;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--dark);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--light);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2.5rem;
+        }
+
+        .conceito-box {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid var(--accent);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        .resultado {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            min-height: 50px;
+            border: 1px dashed var(--primary);
+        }
+
+        .code-example {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🧠 Tarefa Exercicio 1: Lógica de Programação com JavaScript</h1>
+
+        <div class="conceito-box">
+            <h2>🤔 O que fazer?</h2>
+            <p>Crie funções para mostrar idade e se é estudante para os botoes abaixo</p>
+        </div>
+
+        <div class="interactive-area">
+            <div class="demo-box">
+                <h3>📦 Variáveis e Tipos de Dados</h3>
+                <p>Clique para testar as suas variáveis:</p>
+
+
+
+                <button onclick="mostrarNome()">Mostrar Nome</button>
+                <button onclick="mostrarIdade()">Mostrar Idade</button>
+                <button onclick="mostrarEstudante()">Mostrar Estudante</button>
+                <div class="resultado" id="nome"></div>
+                <div class="resultado" id="idade"></div>
+                <div class="resultado" id="estudante"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarNome() {
+            let nome = "Ana";
+
+
+            let resultado = `
+                <p><strong>Nome:</strong> ${nome} (tipo: ${typeof nome})</p>
+            `;
+            document.getElementById('nome').innerHTML = resultado;
+        }
+        /*Criar função mostrarIdade()*/
+        function mostrarIdade() {
+            let idade = "12";
+
+
+            let resultado = `
+                <p><strong>Idade:</strong> ${idade} (tipo: ${typeof idade})</p>
+            `;
+            document.getElementById('idade').innerHTML = resultado;
+        /*Criar função mostrarEstudante()*/}
+        function mostrarEstudante() {
+            let Estudante = true;
+
+
+            let resultado = `
+                <p><strong>Estudante:</strong> ${Estudante} (tipo: ${typeof Estudante})</p>
+            `;
+            document.getElementById('estudante').innerHTML = resultado;
+        }
+    </script>
+</body>
